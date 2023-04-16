@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.aksapps.collageappadmin">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="com.google.android.c2dm.permission.Receiver" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.CollageAppAdmin"
+        tools:targetApi="31">
+        <activity
+            android:name=".Activities.LoginActivity"
+            android:exported="true"
+            android:theme="@style/Theme.MaterialComponents.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Activities.DeleteNoticeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.UpdateTeacherActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.AddTeacherActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.UpdateFacultyActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.UploadPdfActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.UploadImageActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.UploadNoticeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.MainActivity"
+            android:exported="true" />
+
+        <service android:name=".Messaging.FirebaseService"
+            android:permission="com.google.android.c2dm.permission.Send"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+                <action android:name="com.google.android.c2dm.intent.Receive"/>
+            </intent-filter>
+        </service>
+
+    </application>
+
+</manifest>

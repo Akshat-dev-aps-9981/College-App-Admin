@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.LoginActivity"
+    android:background="@android:color/white">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/topbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_55mdp"
+            android:background="@drawable/bottom_rounded">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Login"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/_22font_mdp"
+                android:fontFamily="monospace"
+                android:layout_centerInParent="true"/>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/sign_in"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/topbar"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/_75mdp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="@dimen/_110mdp"
+                android:layout_height="@dimen/_110mdp"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/user"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10mdp"
+                android:layout_marginEnd="@dimen/_10mdp"
+                android:layout_marginTop="@dimen/_10mdp"
+                android:orientation="vertical">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_5mdp"
+                    app:cardElevation="@dimen/_3mdp"
+                    app:cardCornerRadius="@dimen/_3mdp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/_10mdp">
+
+                        <EditText
+                            android:id="@+id/user_email"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_5mdp"
+                            android:layout_marginBottom="@dimen/_2mdp"
+                            android:fontFamily="sans-serif"
+                            android:background="@android:color/white"
+                            android:hint="Email ID"
+                            android:inputType="textEmailAddress"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/_16font_mdp"/>
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10mdp"
+                android:layout_marginEnd="@dimen/_10mdp"
+                android:layout_marginTop="@dimen/_10mdp"
+                android:orientation="vertical">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_5mdp"
+                    app:cardElevation="@dimen/_3mdp"
+                    app:cardCornerRadius="@dimen/_3mdp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/_10mdp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <EditText
+                                android:id="@+id/user_password"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginTop="@dimen/_5mdp"
+                                android:layout_marginBottom="@dimen/_2mdp"
+                                android:background="@android:color/white"
+                                android:fontFamily="sans-serif"
+                                android:hint="Password"
+                                android:inputType="textPassword"
+                                android:textColor="@android:color/black"
+                                android:textSize="@dimen/_16font_mdp" />
+
+                            <TextView
+                                android:id="@+id/txt_show"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true"
+                                android:text="Show"
+                                android:textColor="@android:color/black" />
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/login_btn"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50mdp"
+            android:layout_below="@id/sign_in"
+            android:layout_marginStart="@dimen/_50mdp"
+            android:layout_marginTop="@dimen/_30mdp"
+            android:layout_marginEnd="@dimen/_50mdp"
+            android:background="@drawable/rounded_corner">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:fontFamily="monospace"
+                android:text="LOGIN"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/_17font_mdp" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</ScrollView>

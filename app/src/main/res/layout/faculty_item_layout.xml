@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="@dimen/_4mdp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_4mdp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_4mdp"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/_12mdp"
+                android:layout_weight="1.5"
+                android:orientation="vertical"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/teacher_name"
+                    android:text="Akshat Sharma"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/_18font_mdp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/teacher_phone_number"
+                    android:text="+919981132391"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/_16font_mdp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/teacher_email"
+                    android:text="akshat2sharma9981@gmail.com"
+                    android:singleLine="true"
+                    android:ellipsize="marquee"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/_16font_mdp"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/teacher_update_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Update Info"
+                    android:layout_marginVertical="@dimen/_4mdp"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"/>
+
+            </LinearLayout>
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/teacher_image"
+                android:layout_width="@dimen/_60mdp"
+                android:layout_height="@dimen/_120mdp"
+                android:layout_weight="0.5"
+                android:layout_gravity="center"
+                app:civ_border_width="@dimen/_2mdp"
+                android:src="@drawable/ic_profile"
+                app:civ_border_color="#63FFB6"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>
